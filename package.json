@@ -1,6 +1,6 @@
 {
   "name": "generator-lcc-sharepointpnp",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Basic PnP template scaffolding",
   "homepage": "https://github.com/lccgov/generator-lcc-sharepointpnp",
   "author": {
