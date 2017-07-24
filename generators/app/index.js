@@ -12,10 +12,16 @@ module.exports = class extends Generator {
 
     const prompts = [{
       type: 'confirm',
-      name: 'someAnswer',
-      message: 'Would you like to enable this option?',
+      name: 'goCreate',
+      message: 'Creating the files in the current diretory, is that ok?',
       default: true
-    }];
+    },
+      {
+      type: 'input',
+      name: 'name',
+      message: 'What is the name of this package?',
+      default: this.appname
+      }];
 
     return this.prompt(prompts).then(props => {
       // To access props later use this.props.someAnswer;
@@ -24,13 +30,17 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
-    );
+    var _this = this;
+    if(_this.props.goCreate) 
+    {
+      this.fs.copy(
+        this.templatePath('dummyfile.txt'),
+        this.destinationPath('dummyfile.txt')
+      );
+    }
   }
 
   install() {
-    this.installDependencies();
+    //this.installDependencies();
   }
 };
