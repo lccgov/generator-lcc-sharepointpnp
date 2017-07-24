@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2016/05/ProvisioningSchema">
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2017/05/ProvisioningSchema">
   <pnp:Preferences />
-  <pnp:Templates ID="CONTAINER-TEMPLATE-LCC<%= name %>">
-    <pnp:ProvisioningTemplate ID="TEMPLATE-LCC<%= name %>" Version="1">
+  <pnp:Templates ID="CONTAINER-TEMPLATE-<%= name %>">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-<%= name %>" Version="1">
 
         </pnp:SiteFeatures>
       </pnp:Features>
