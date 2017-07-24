@@ -4,8 +4,6 @@
   <pnp:Templates ID="CONTAINER-TEMPLATE-<%= name %>">
     <pnp:ProvisioningTemplate ID="TEMPLATE-<%= name %>" Version="1">
 
-        </pnp:SiteFeatures>
-      </pnp:Features>
 
     </pnp:ProvisioningTemplate>
   </pnp:Templates>
