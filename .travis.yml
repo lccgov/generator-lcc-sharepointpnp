@@ -6,10 +6,6 @@ before_install:
 - echo "//registry.npmjs.org/:_password=\${NPMTOKEN}" >> .npmrc
 - echo "//registry.npmjs.org/:username=lccgov" >> .npmrc
 - echo "//registry.npmjs.org/:email=developer@leeds.gov.uk" >> .npmrc
-install:
-- npm install -g npm
-- npm install gulp gulp-cli
-- npm install
 script:
 - npm whoami
 - chmod +x ./bin/publish.sh
