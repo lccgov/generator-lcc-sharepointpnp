@@ -3,6 +3,19 @@ node_js:
 - 7
 - 6
 - 4
+before_install:
+- echo "//registry.npmjs.org/:_authToken=\${NPMAUTH}" > .npmrc
+- echo "//registry.npmjs.org/:_password=\${NPMTOKEN}" >> .npmrc
+- echo "//registry.npmjs.org/:username=lccgov" >> .npmrc
+- echo "//registry.npmjs.org/:email=developer@leeds.gov.uk" >> .npmrc
+install:
+- npm install -g npm
+- npm install gulp gulp-cli
+- npm install
+script:
+- npm whoami
+- chmod +x ./bin/publish.sh
+- "./bin/publish.sh"
 dd:
   secure: TaXIwsfM6FRBiKdg2vOKYw1oz0sZ6XRpFr8zg6d0VkUPXcpK/mpDqQ0FxL3T3bGtX/cY7lLPvv05U+rrHRddO1yCUTYeehcVre1AglM3jb6OMKQWYI5N848bjnm/0ag8Q9/uVeiWqabevmEMsSyslhidoqjSW5mXE7HxUnRLbEqfAl/fH0dlWP2z83Q8Qb5HJ4VZwmsIiPCVgtt9dEgSVK2SdZPUg94/MvA6HSIhod2ZlzE+G6gUsFTd/hWFa7F9BK31f9iNO5VsFSwfxaXainVKNn+10ivZwP51ZBK4/WASDfiBsawD+TayntY5cTK/d+WwZTcoNRy62X0ZHevv4vC9UVcQG33UljpNdleAKfp7NkqRfHBC0bbldTKYWuAzaoeetYpSb2JrWDyDHs0AzNOOZg0wPs+DUZL5lHVJpg1089i26RC60bWOWETZf6AkRMHblg1uTxMYEDWvFDUFu0cCc8H2rB0irKYb3mH7hQpC4CCSqfs9ApoR784ArlMzzf7qVKH1iLMQIN8R7pjMhZ30ljXBgI2loYIWi2CADOkaSVgWr3SBmfVhnvFJYf37aynXfSW2q8DS7A0QhDQ+FINN0RsmMtf9MpnLsj6qwDwbwTNP11CQ1qaX4pd8RDipqtFsPuzDBBotg2u1YgBQN3gxLSQ3DY1qn460EQn3iAI=
 env:
