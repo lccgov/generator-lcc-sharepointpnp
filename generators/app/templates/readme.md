@@ -14,7 +14,7 @@ Please use the following links as a guide to populating the schema xml file
 To deploy this locally to a dev environment please use the following PowerShell command
 
 ``` PowerShell
-\\netapp02\tfs\TFS\Packages\SP2013\LCC.PnPProvisioning\LCC.PnPProvisioning.Build\latest\Apply-PnPProvisioningTemplate.ps1 -siteUrl <%= url %> -pnpTemplate <%= name %>.xml -binaryWorkingFolder d:\Dev2\<%= name %>
+"C:\Program Files (x86)\LCC\Provisioning Extensibility\Apply-PnPProvisioningTemplate.ps1" -siteUrl <%= url %> -pnpTemplate <%= name %>.xml -binaryWorkingFolder d:\Dev2\<%= name %>
 ```
 
 ## Pushing files to an existing Git repository
