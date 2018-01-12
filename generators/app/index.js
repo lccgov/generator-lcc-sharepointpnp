@@ -7,7 +7,7 @@ module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the glorious ' + chalk.red('generator-lcc-sharepointpnp') + ' generator!'
+      'Welcome to the glorious ' + chalk.red('generator-lcc-sharepointpnp') + ' generator! 1.1.4'
     ));
 
     const prompts = [{
@@ -20,7 +20,7 @@ module.exports = class extends Generator {
       type: 'input',
       name: 'name',
       message: 'What is the name of this package?',
-      default: this.appname
+      default: this.appname.replace(' ','.')
     },
     {
       type: 'input',
