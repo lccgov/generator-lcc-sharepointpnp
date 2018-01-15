@@ -2,12 +2,13 @@
 const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
+const packageVersion = require('root-require')('package.json').version;
 
 module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the glorious ' + chalk.red('generator-lcc-sharepointpnp') + ' generator! 1.1.5'
+      'Welcome to the glorious ' + chalk.red('generator-lcc-sharepointpnp') + ' generator! ' + packageVersion
     ));
 
     const prompts = [{
@@ -42,7 +43,8 @@ module.exports = class extends Generator {
         this.templatePath('readme.md'),
         this.destinationPath('readme.md'), {
           name: _this.props.name,
-          url: _this.props.url
+          url: _this.props.url,
+          path: process.cwd()          
         }
       );
 
