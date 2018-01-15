@@ -14,7 +14,7 @@ Please use the following links as a guide to populating the schema xml file
 To deploy this locally to a dev environment please use the following PowerShell command
 
 ``` PowerShell
-"C:\Program Files (x86)\LCC\Provisioning Extensibility\LCC.Provisioning.Extensibility.Console.exe" --SiteUrl <%= url %> --PnpTemplate <%= name %>.xml --BinaryWorkingFolder <%= path %>\<%= name %> -l <%= path %>\logs
+"C:\Program Files (x86)\LCC\Provisioning Extensibility\LCC.Provisioning.Extensibility.Console.exe" --SiteUrl <%= url %> --PnpTemplate <%= name %>.xml --BinaryWorkingFolder <%= path %> -l <%= path %>\logs
 ```
 
 ## Pushing files to an existing Git repository
