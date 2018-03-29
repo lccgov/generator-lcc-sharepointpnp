@@ -11,7 +11,11 @@ Please use the following links as a guide to populating the schema xml file
 - [Full schema for 201705](https://github.com/SharePoint/PnP-Provisioning-Schema/blob/master/Samples/ProvisioningSchema-2017-05-FullSample-01.xml)
 
 ## Local Deployment
-To deploy this locally to a dev environment please use the following PowerShell command
+To deploy this locally to a dev environment please use the following PowerShell command. 
+You may need to run the supporting application and PowerShell extensions 
+at \TFS\TFS\Packages\SP2013\LCC.Provisioning.Extensibility\LCC.Provisioning.Extensibility\latest\install.ps1
+
+These files are located on the internal TFS release destination folder
 
 ``` PowerShell
 "C:\Program Files (x86)\LCC\Provisioning Extensibility\LCC.Provisioning.Extensibility.Console.exe" --SiteUrl <%= url %> --PnpTemplate <%= name %>.xml --BinaryWorkingFolder <%= path %> -l <%= path %>\logs

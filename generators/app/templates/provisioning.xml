@@ -5,6 +5,37 @@
     <pnp:ProvisioningTemplate ID="TEMPLATE-<%= name %>" Version="1">
 
 
+    <!-- Masterpage -->
+    <pnp:WebSettings
+      Title="<%= name %>"
+      Description="<%= name %> site"
+      MasterPageUrl="/_catalogs/masterpage/<Your masterpage>.master">
+    </pnp:WebSettings>
+
+
+    <!-- Property bag entries -->
+    <!--<pnp:PropertyBagEntries>
+        <pnp:PropertyBagEntry
+            Key="PropertyBagKey"
+            Value="MyValue"
+            Overwrite="true"
+            Indexed="false">
+        </pnp:PropertyBagEntry>
+  </pnp:PropertyBagEntries>-->
+
+    <pnp:Features>
+        <pnp:SiteFeatures>
+            <!-- Web Lists - if you are creating a public facing website, 
+            you'll need to uncomment this so you can create lists/libraries 
+            with the correct permissions mask to support anonymous access for search queries-->
+            <!--<pnp:Feature
+                ID="cd687d27-4bff-4936-bda7-08d733f2ff4a"
+                Deactivate="false">
+            </pnp:Feature>-->
+              
+          </pnp:SiteFeatures>
+        </pnp:Features>
+
     </pnp:ProvisioningTemplate>
   </pnp:Templates>
 </pnp:Provisioning>
